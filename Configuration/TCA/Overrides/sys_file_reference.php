@@ -1,7 +1,5 @@
 <?php
-if (!defined('TYPO3_MODE')) {
-    die ('Access denied.');
-}
+defined('TYPO3') or die();
 
 $tca = [
     'dc_title' => [
@@ -11,9 +9,8 @@ $tca = [
         'config' => [
             'type' => 'input',
             'size' => 20,
-            'eval' => 'null',
+            'nullable' => true,
             'placeholder' => '__row|uid_local|metadata|dc_title',
-            'mode' => 'useOrOverridePlaceholder',
             'default' => null,
         ],
     ],
@@ -24,9 +21,8 @@ $tca = [
         'config' => [
             'type' => 'input',
             'size' => 20,
-            'eval' => 'null',
+            'nullable' => true,
             'placeholder' => '__row|uid_local|metadata|dc_description',
-            'mode' => 'useOrOverridePlaceholder',
             'default' => null,
         ],
     ],
@@ -37,9 +33,8 @@ $tca = [
         'config' => [
             'type' => 'input',
             'size' => 20,
-            'eval' => 'null',
+            'nullable' => true,
             'placeholder' => '__row|uid_local|metadata|cc_license',
-            'mode' => 'useOrOverridePlaceholder',
             'default' => null,
         ],
     ],
@@ -50,9 +45,8 @@ $tca = [
         'config' => [
             'type' => 'input',
             'size' => 20,
-            'eval' => 'null',
+            'nullable' => true,
             'placeholder' => '__row|uid_local|metadata|cc_attribution_url',
-            'mode' => 'useOrOverridePlaceholder',
             'default' => null,
         ],
     ],
@@ -63,9 +57,8 @@ $tca = [
         'config' => [
             'type' => 'input',
             'size' => 20,
-            'eval' => 'null',
-            'placeholder' => '__row|uid_local|metadata|dc_description',
-            'mode' => 'useOrOverridePlaceholder',
+            'nullable' => true,
+            'placeholder' => '__row|uid_local|metadata|cc_attribution_name',
             'default' => null,
         ],
     ],
@@ -76,9 +69,8 @@ $tca = [
         'config' => [
             'type' => 'input',
             'size' => 20,
-            'eval' => 'null',
+            'nullable' => true,
             'placeholder' => '__row|uid_local|metadata|xmprights_usage_terms',
-            'mode' => 'useOrOverridePlaceholder',
             'default' => null,
         ],
     ],
@@ -89,9 +81,8 @@ $tca = [
         'config' => [
             'type' => 'input',
             'size' => 20,
-            'eval' => 'null',
+            'nullable' => true,
             'placeholder' => '__row|uid_local|metadata|xmprights_web_statement',
-            'mode' => 'useOrOverridePlaceholder',
             'default' => null,
         ],
     ],
